@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.contenedor{
+  padding: 60px 0;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+section .habitaciones .servicios .ubicacion{
+      height: 650px;
+}
+
+/* NOTE: Menu Cambiante */
+
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border: 1px solid rgba(0,0,0,0.04);
+  background-color: #ffffff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img{
+  height: 90px;
+}
+
+nav .menu{
+  display: flex;
+}
+
+nav .menu li a{
+  height: 40px;
+  line-height: 43px;
+  margin: 0px;
+  padding: 0px 22px;
+  display: flex;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #585858;
+  letter-spacing: 1px;
+  font-family: 'poppins', sans-serif;
+}
+
+.search{
+  width: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search i{
+  font-size: 20px;
+  padding-left: 10px;
+  color: #232323;
+}
+
+.search i:hover{
+  color: #35427d;
+}
+
+nav .menu li a:hover{
+  background-color: #35427d;
+  color: #ffffff;
+  box-shadow: 5px 10px 30px rgba(53,53,53,0.1);
+  transition: all ease 0.2s;
+}
+
+
+/* NOTE: Banner + Texto animado */
+#home{
+  height: 100vh;
+  min-height: 500px;
+  background: url('../img/banner.png') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#home .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+#home .content{
+  width: 100%;
+  color: #fff;
+}
+
+#home .content h1{
+  font-size: 60px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+#home .content h3{
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+#home .content h3::after{
+  content: "UN HOTEL CON MAGIA";
+  animation: textanim 8s linear infinite;
+}
+
+@keyframes textanim{
+  25%{
+    content: "UN HOTEL DONDE ENCONTRARA";
+  }
+  50%{
+    content: "LA CALIDEZ Y EL SERVICIO QUE NOS DISTINGUE";
+  }
+  75%{
+    content: "ESPERAMOS QUE SU ESTANCIA SEA CONFORTABLE. ";
+  }
+}
+
+
+.banner-btn{
+  font-size: 1em;
+  color: #fff;
+  background: #35427d;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.banner-btn:hover{
+  letter-spacing: 6px;
+}
+
+@media screen and (max-width: 800px){
+  #home .content{
+    max-width: 80%;
+  }
+  #home .content h1 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    #home .content h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    l
+  }
+
+  .banner-btn{
+    font-size: .9em;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+  #home{
+    height: 70vh;
+  }
+}
+
+
+
+/* NOTE: Nosotros*/
+.nosotros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    width: 85vw;
+    margin: 0 auto;
+}
+
+.contenido-nosotros{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contenido-nosotros h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+    font-family: 'Playfair Display', serif;
+}
+.contenido-nosotros span{
+    height: 0.5px;
+    width: 80px;
+    background: #777;
+    margin: 30px 0;
+}
+.contenido-nosotros p{
+    padding-bottom: 15px;
+    font-weight: 400;
+    opacity: 0.7;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media(max-width: 992px){
+    .nosotros{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .image{
+        height: 100vh;
+    }
+    .contenido-nosotros{
+        height: 90vh;
+    }
+    .contenido-nosotros h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .contenido-nosotros span{
+        margin: 20px 0;
+    }
+    .contenido-nosotros p{
+        font-size: 14px;
+    }
+
+}
+/* NOTE: SLIDER CHICO Nosotros*/
+.carousel {
+  background: #FAFAFA;
+  margin: 0 0px; /* space for prev/next buttons */
+  height: 450px;
+}
+
+.carousel-cell {
+  width: 130%;
+  height: 450px;
+  margin-right: 10px;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+}
+
+.carousel.is-fullscreen .carousel-cell-image {
+  max-width: 100%;
+}
+
+
+
+
+
+
+/* HABITACIONES */
+.habitaciones{
+  padding-top: 100px;
+  padding-bottom: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenido-habitaciones{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contenido-habitaciones h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+    font-family: 'Playfair Display', serif;
+}
+
+.contenido-habitaciones span{
+    height: 0.5px;
+    width: 80px;
+    background: #777;
+    margin: 30px 0;
+}
+
+.colorhb{
+  background: #fafafa;
+}
+
+.contenedorhb{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 60px;
+}
+
+.cardhb{
+  height: 500px;
+  max-width: 400px;
+    margin: 0 20px;
+    transition: 0.4s;
+    background: white;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.cardhb:hover{
+  height: 650px;
+  box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+}
+
+.cardhb .imghb{
+  height: 400px;
+  width: 100%;
+}
+
+.cardhb .imghb img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cardhb2 .top-text{
+  padding: 5px;
+  b
+}
+
+.cardhb .top-text .titulohb{
+  font-size: 25px;
+  font-weight: 600;
+  color: #202020;
+  padding: 20px 10px 10px 10px;
+  font-family: 'Playfair Display', serif;
+  color: #35427d;
+
+}
+
+.cardhb .top-text p{
+  padding: 0 10px 10px 10px;
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  line-height: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cardhb .bottom-text{
+  padding: 0 20px 10px 15px;
+  margin-top: 5px;
+  visibility: hidden;
+  transition: 0.1s;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.cardhb:hover .bottom-text{
+  visibility: visible;
+  transition: .4s;
+}
+
+.cardhb .bottom-text .texthab{
+  text-align: justify;
+}
+
+.texthab .iconos{
+  display: flex;
+  margin-top: 10px;
+}
+.texthab .iconos p{
+padding: 0 20px 0 5px;
+font-size: 13px;
+}
+
+
+ @media screen and (max-width: 978px){
+  .contenedorhb{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .cardhb{
+    max-width: 700px;
+    margin: 0 20px;
+    margin-bottom: 20px;
+  }
+ }
+
+
+/* NOTE: SERVICIOS */
+.servicios{
+    padding-top: 50px;
+}
+
+.contenidoserv{
+  padding: 0 4%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardserv{
+  width: 250px;
+  height: 200px;
+  background: #;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(8,8,8,0.12);
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.iconserv{
+  margin: 0 auto;
+  width: 100%;
+  height: 80px;
+  max-width: 80px;
+  background: #35427d;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff
+  background-position: 0px;
+  background-size: 200px;
+  transition: all 0.8s ease;
+}
+
+.iconserv i {
+  font-size: 36px;
+  color: #fff;
+}
+
+.cardserv .tituloserv{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  margin-top: 20px;
+  color: #232323;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cardserv .textserv{
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+    color: #232323;
+    top: -118px;
+  transition: 0.3s ease;
+  background: #fff;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.24);
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  transform: rotateX(-50%) translateY(-50%;);
+  padding: 20px 10px;
+}
+
+.cardserv:hover .textserv{
+  visibility: visible;
+  opacity: 1;
+  transform: rotateX(-50%) translateY(0%;);
+
+}
+
+  .cardserv .textserv:before{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  bottom: -5px;
+  left: 6px;
+  transform: rotate(45deg);
+}
+
+.cardserv:hover{
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.24);
+}
+
+.cardserv .iconserv:hover{
+  background: #232323;
+}
+
+.cardserv .iconserv i:hover{
+  font-size: 40px;
+}
+
+ @media screen and (max-width: 800px){
+  .contenidoserv{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+ }
+
+
+/* UBICACIÓN */
+.ubicacion{
+  padding-top: 60px;
+  padding-bottom: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenido-ubicacion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contenido-ubicacion h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+    font-family: 'Playfair Display', serif;
+}
+
+.contenido-ubicacion span{
+    height: 0.5px;
+    width: 80px;
+    background: #777;
+    margin: 30px 0;
+}
+
+.contenido-ubicacion p{
+    padding-bottom: 10px;
+    font-weight: 400;
+    opacity: 0.7;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ubicacion-wrap{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacto-in{
+  padding: 40px 30px;
+}
+
+.contacto-in:nth-child(1){
+  flex: 30%;
+  background: url('https://scontent.fpbc1-1.fna.fbcdn.net/v/t1.0-9/107664837_155217852768922_3305063041095753337_o.jpg?_nc_cat=106&ccb=3&_nc_sid=8bfeb9&_nc_ohc=jJMnmlkFAb4AX_Nz9IK&_nc_ht=scontent.fpbc1-1.fna&oh=4b4a00fd802fa4d7392f9b68d1edba0e&oe=60490F42');
+  color: #fff;
+}
+
+.contacto-in:nth-child(2){
+  flex: 50%;
+  background: #c31332;
+  padding: 0;
+}
+.contacto-in h2{
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'poppins', sans-serif;
+  margin-bottom: 10px;
+}
+
+.contacto-in h2 i{
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background: #f5f5f5;
+  color: #000;
+  font-weight: 400;
+  border-radius: 50px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.contacto-in p{
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  font-family: 'poppins', sans-serif;
+}
+
+.contacto-in iframe{
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 800px;){
+  .contacto-in:nth-child(1){
+    flex: 50%;
+  }
+
+  .contacto-in:nth-child(2){
+    flex: 100%;
+  }
+  .contacto-in iframe{
+    height: 300px;
+  }
+}
